@@ -1,0 +1,94 @@
+body {
+  margin: 20px;
+  background-color: lightpink;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* .userpic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+} */
+
+.movie-container {
+  width: 500px;
+  /* height: min-content; */
+}
+
+.movie-poster {
+  height: 270px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.movie-rating {
+  margin: 10px;
+}
+
+.movie-summary {
+  margin: 10px;
+}
+
+/* .movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;  
+}
+
+.app {
+  text-align: center;
+  width: 200px ;
+} */
+
+.counter-container {
+  display: flex;
+  gap: 10px;
+}
+
+.like-disLike {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+
+nav {
+  font-size: 28px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25%;
+}
+
+.error-img {
+  width: 75%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.error-head {
+  font-size: 64px;
+  margin: 0px;
+}
+
+.home-page {
+  font-size: 100px;
+}
