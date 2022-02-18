@@ -1,75 +1,15 @@
-body {
-  margin: 20px;
-  background-color: lightpink;
+.add-container-dark {
+  background-color: black;
+  color: white;
 }
 
-.app {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* .userpic {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-} */
-
-.movie-container {
-  width: 500px;
-  /* height: min-content; */
-}
-
-.movie-poster {
-  height: 270px;
-  width: 500px;
-  object-fit: cover;
-}
-
-.movie-rating {
-  margin: 10px;
-}
-
-.movie-summary {
-  margin: 10px;
-}
-
-/* .movie-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;  
-}
-
-.app {
-  text-align: center;
-  width: 200px ;
-} */
-
-.counter-container {
-  display: flex;
-  gap: 10px;
-}
-
-.like-disLike {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
+.add-container-dark filled-basic {
+  background-color: black;
+  color: white;
 }
 
 
-nav {
-  font-size: 28px;
-  margin: 10px;
-  display: flex;
-  justify-content: space-around;
-}
+
 
 .error-container {
   display: flex;
@@ -89,6 +29,159 @@ nav {
   margin: 0px;
 }
 
-.home-page {
+
+
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.nav-light {
+  font-size: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+  color: white;
+}
+
+.nav-dark {
+  font-size: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+.nav-light a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-dark a {
+  text-decoration: none;
+  color: white;
+}
+
+.home-container-dark {
+  background-color: black;
+  color: white;
+  height: 690px;
+}
+
+.home-container-light {
+  background-color: white;
+  color: black;
+  height: 690px;
+}
+
+.home-body-container {
   font-size: 100px;
+  padding: 20px;
+}
+
+.add-container-dark {
+  height: 690px;
+}
+
+#filled-basic-dark {
+  background-color: darkgray;
+  color: white;
+}
+
+#filled-basic-label-dark {
+  background-color: darkgray;
+  color: white;
+}
+
+#add-button-dark {
+  background-color: rgb(50, 50, 50);
+}
+
+.movielist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.movielist-dark {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+}
+
+.css-bhp9pd-MuiPaper-root-MuiCard-root-dark {
+  background-color: rgb(50, 50, 50);
+}
+
+.movie-card-content-dark {
+  background-color: rgb(50,50,50);
+  color: white;
+}
+
+.movie-container {
+  width: 500px;
+}
+
+.movie-container-dark {
+  width: 500px;
+}
+
+.movie-card-actions-dark {
+  background-color: rgb(50,50,50);
+}
+
+.movie-poster {
+  height: 270px;
+  width: 500px;
+  object-fit: cover;
+}
+
+.movie-rating {
+  margin: 10px;
+}
+
+.movie-summary {
+  margin: 10px;
+}
+
+.counter-container {
+  display: flex;
+  gap: 10px;
+}
+
+.like-disLike {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-details-dark {
+  background-color:black;
+  color: white;
+  height: 690px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-details-light {
+  height: 690px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

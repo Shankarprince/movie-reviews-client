@@ -4,6 +4,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext.js';
 
 export function MovieList() {
 
@@ -24,8 +26,9 @@ export function MovieList() {
             .then(getMovies)
     }
 
+    const theme = useContext(ThemeContext);
     return (
-        <div className="app">
+        <div className={ theme==="light" ? "movielist" : "movielist-dark"}>
             {/* using map function to iterate the array and passing movie name and other values to Msg component */}
             {movies.map(({_id, name, poster, rating, summary}) =>
                 <Movie

@@ -4,6 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useParams, useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
 
 export function EditMovie() {
     const { id } = useParams();
@@ -33,6 +35,8 @@ function UpdateMovie({ movie }) {
     const [summary, setSummary] = useState(movie.summary);
     const [trailer, setTrailer] = useState(movie.trailer);
 
+    const theme = useContext(ThemeContext);
+
     const addEditedMovie = () => {
 
         const updatedMovie = {
@@ -53,14 +57,14 @@ function UpdateMovie({ movie }) {
     }
 
     return (
-        <div>
+        <div className={theme === "light" ? "add-container-light" : "add-container-dark"}>
             <div className="inputs">
-                <TextField id="filled-basic" label="Enter Movie Name" variant="filled" value={name} onChange={(event) => setName(event.target.value)} />
-                <TextField id="filled-basic" label="Enter Movie Poster URL" variant="filled" value={poster} onChange={(event) => setPoster(event.target.value)} />
-                <TextField id="filled-basic" label="Enter Movie Rating" variant="filled" value={rating} onChange={(event) => setRating(event.target.value)} />
-                <TextField id="filled-basic" label="Enter Movie Summary" variant="filled" value={summary} onChange={(event) => setSummary(event.target.value)} />
-                <TextField id="filled-basic" label="Enter Movie Trailer URL" variant="filled" value={trailer} onChange={(event) => setTrailer(event.target.value)} />
-                <Button onClick={() => { addEditedMovie() }} variant="contained">Save</Button>
+                <TextField id={theme === "light" ? "filled-basic" : "filled-basic-dark"} label="Enter Movie Name" variant="filled" value={name} onChange={(event) => setName(event.target.value)} />
+                <TextField id={theme === "light" ? "filled-basic" : "filled-basic-dark"} label="Enter Movie Poster URL" variant="filled" value={poster} onChange={(event) => setPoster(event.target.value)} />
+                <TextField id={theme === "light" ? "filled-basic" : "filled-basic-dark"} label="Enter Movie Rating" variant="filled" value={rating} onChange={(event) => setRating(event.target.value)} />
+                <TextField id={theme === "light" ? "filled-basic" : "filled-basic-dark"} label="Enter Movie Summary" variant="filled" value={summary} onChange={(event) => setSummary(event.target.value)} />
+                <TextField id={theme === "light" ? "filled-basic" : "filled-basic-dark"} label="Enter Movie Trailer URL" variant="filled" value={trailer} onChange={(event) => setTrailer(event.target.value)} />
+                <Button id={ theme === "light" ? "" : "add-button-dark"} onClick={() => { addEditedMovie() }} variant="contained">Save</Button>
             </div>
         </div>
     );

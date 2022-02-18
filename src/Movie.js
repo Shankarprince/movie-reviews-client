@@ -12,6 +12,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import { useHistory } from 'react-router-dom';
 import InfoIcon from '@mui/icons-material/Info';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext.js';
 
 export function Movie({ name, poster, rating, summary, id, editButton, deleteButton }) {
   //  let styles = { color : "crimson", fontWeight : "bold" };
@@ -19,9 +21,10 @@ export function Movie({ name, poster, rating, summary, id, editButton, deleteBut
   const [show, setShow] = useState(true);
   let summaryStyles = { display: show ? "block" : "none" }
   const history = useHistory();
+  const theme = useContext(ThemeContext);
   return (
-    <Card>
-      <CardContent>
+    <Card className={theme==="light" ? "" : "css-bhp9pd-MuiPaper-root-MuiCard-root-dark"}>
+      <CardContent className={theme==="light" ? "" : "movie-card-content-dark"}>
         <div className="movie-container">
           <h2 className="movie-name">{name} </h2>
           <img className="movie-poster" src={poster} alt={name} />
@@ -48,7 +51,7 @@ export function Movie({ name, poster, rating, summary, id, editButton, deleteBut
           <p style={summaryStyles} className="movie-summary">{summary}</p>
         </div>
       </CardContent>
-      <CardActions>
+      <CardActions className={theme==="light" ? "" : "movie-card-actions-dark"}>
         <Counter /> {editButton} {deleteButton}
       </CardActions>
     </Card>
