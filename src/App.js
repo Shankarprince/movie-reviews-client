@@ -28,7 +28,7 @@ export default function App() {
           <Link to="/">Home</Link>
           <Link to="/addmovie">Add New Movie</Link>
           <Link to="/movielist">Movies List</Link>
-          <p onClick={toggleTheme}>Theme</p>
+          <p onClick={toggleTheme}>Change Theme</p>
         </nav>
         <Switch>
           <Route path="/addmovie"><AddMovie /></Route>
